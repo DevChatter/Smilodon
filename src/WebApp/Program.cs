@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+using Smilodon.WebApp.Api.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +18,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 app.UseRouting();
+
+app.MapGroup("/api/v1/admin")
+    .MapAdminApiV1()
+    .WithTags("Admin Endpoints");
 
 app.UseEndpoints(x => 
 {

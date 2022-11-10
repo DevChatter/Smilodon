@@ -12,6 +12,7 @@ defaults:
 
 jobs:
   api-build:
+    name: WebApp Build
     runs-on: ubuntu-latest
 
     steps:
@@ -37,8 +38,13 @@ jobs:
           !WebApp/ClientApp
         key: api-${{ runner.os }}-${{github.run_id}}
 
-  api-test:
+
+  something:
+
+    name: WebApp Testing
+
     runs-on: ubuntu-latest
+
     needs: api-build
 
     steps:

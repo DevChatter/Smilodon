@@ -54,3 +54,56 @@ jobs:
 
     - name: Run Tests
       run: dotnet test --no-build --verbosity normal
+
+  client-build:
+    name: ClientApp Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/WebApp/ClientApp
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install ClientApp Dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Build ClientApp
+        run: npm run build
+
+      - name: Save Built ClientApp to Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            .
+          key: client-${{ runner.os }}-${{github.run_id}}
+
+  client-test:
+    name: ClientApp Tests
+    runs-on: ubuntu-latest
+    needs: client-build
+    defaults:
+      run:
+        working-directory: src/WebApp/ClientApp
+
+    steps:
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Pull Built ClientApp from Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            .
+          key: client-${{ runner.os }}-${{github.run_id}}
+
+      - name: ClientApp Unit Testing
+        run: echo "Will eventually run the tests here"
+#        run: npm run tests

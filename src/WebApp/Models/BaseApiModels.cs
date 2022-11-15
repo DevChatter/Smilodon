@@ -3,14 +3,13 @@ using System.Text.Json.Serialization;
 namespace Smilodon.WebApp.Models;
 
 public abstract record BaseObject(
-    [property: JsonPropertyName("@context")]
+    [property:JsonPropertyName("@context")]
     List<string> context,
     string type,
     string id,
     string name);
 
 public record Collection(
-    [property: JsonPropertyName("@context")]
     List<string> context,
     string type,
     string id,
@@ -24,7 +23,6 @@ public record Collection(
 
 
 public record OrderedCollection(
-    [property: JsonPropertyName("@context")]
     List<string> context,
     string type,
     string id,

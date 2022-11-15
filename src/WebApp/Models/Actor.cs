@@ -23,7 +23,7 @@ public record Actor(
     string name,
     string summary,
     string[] icon,
-    PublicKey publicKey))
+    PublicKey publicKey)
         : BaseModel(context, type, id, name)
 {
 }

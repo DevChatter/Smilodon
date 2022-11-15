@@ -1,4 +1,27 @@
-# Smilodon
+# Codename "Smilodon"
+
+ActivityPub implementation in dotnet (.net).
+
+<p>
+  <a href="https://github.com/DevChatter/Smilodon/graphs/contributors" alt="Contributors">
+  <img src="https://img.shields.io/github/contributors/DevChatter/Smilodon" /></a>
+
+  <a href="https://github.com/DevChatter/Smilodon/stargazers" alt="Stars">
+  <img src="https://img.shields.io/github/stars/DevChatter/Smilodon" /></a>
+
+  <a href="https://github.com/DevChatter/Smilodon/issues" alt="Issues">
+  <img src="https://img.shields.io/github/issues/DevChatter/Smilodon" /></a>
+
+  <a href="https://github.com/DevChatter/Smilodon/blob/main/LICENSE" alt="License">
+  <img src="https://img.shields.io/github/license/DevChatter/Smilodon" /></a>
+</p>
+
+![Twitter Follow](https://img.shields.io/twitter/follow/brendoneus?style=social)
+![Mastodon Follow](https://img.shields.io/mastodon/follow/109288133487144928?domain=https%3A%2F%2Four.devchatter.com&style=social)
+
+## Current Build status
+
+[![PR - Build and Test](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml/badge.svg)](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml)
 
 ## Running Development Build Locally
 

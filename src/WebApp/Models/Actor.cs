@@ -1,18 +1,17 @@
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Smilodon.WebApp.Models;
 
-// Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-public class PublicKey
+public record PublicKey
 {
     public string id { get; set; }
     public string owner { get; set; }
     public string publicKeyPem { get; set; }
 }
 
-public class Actor
+public record Actor
 {
-    [JsonProperty("@context")]
+    [JsonPropertyName("@context")]
     public List<string> context { get; set; }
     public string id { get; set; }
     public string type { get; set; }

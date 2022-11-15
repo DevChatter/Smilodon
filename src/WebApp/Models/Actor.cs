@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace Smilodon.WebApp.Models;
 
 // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);

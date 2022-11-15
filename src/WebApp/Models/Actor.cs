@@ -9,14 +9,22 @@ public record PublicKey
     public string publicKeyPem { get; set; }
 }
 
-public record Actor
+public record Actor(
+    [property: JsonPropertyName("@context")]
+    List<string> context,
+    string type,
+    string id,
+    string following,
+    string followers,
+    string liked,
+    string inbox,
+    string outbox,
+    string preferredUsername,
+    string name,
+    string summary,
+    string[] icon,
+    PublicKey publicKey))
+        : BaseModel(context, type, id, name)
 {
-    [JsonPropertyName("@context")]
-    public List<string> context { get; set; }
-    public string id { get; set; }
-    public string type { get; set; }
-    public string preferredUsername { get; set; }
-    public string inbox { get; set; }
-    public PublicKey publicKey { get; set; }
 }
 

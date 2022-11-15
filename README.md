@@ -16,9 +16,6 @@ ActivityPub implementation in dotnet (.net).
   <img src="https://img.shields.io/github/license/DevChatter/Smilodon" /></a>
 </p>
 
-![Twitter Follow](https://img.shields.io/twitter/follow/brendoneus?style=social)
-![Mastodon Follow](https://img.shields.io/mastodon/follow/109288133487144928?domain=https%3A%2F%2Four.devchatter.com&style=social)
-
 ## Current Build status
 
 [![PR - Build and Test](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml/badge.svg)](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml)
@@ -42,3 +39,12 @@ The client application can be run from the command line using the following comm
 ``` bat
 npm run dev
 ```
+
+## Primary Contributors
+
+### Brendan Enrick (@Brendoneus)
+
+[![Brendoneus Twitter Follow](https://img.shields.io/twitter/follow/brendoneus?style=social)](https://twitter.com/brendoneus)
+[![Brendoneus Mastodon Follow](https://img.shields.io/mastodon/follow/109288133487144928?domain=https%3A%2F%2Four.devchatter.com&style=social)](https://our.devchatter.com/@brendoneus)
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCA8TsqMrOdFBv66iIuU6efA?style=social)](https://www.youtube.com/c/devchatter)
+[![DevChatter Twitch](https://img.shields.io/badge/Twitch-DevChatter-9146FF)](https://www.twitch.tv/DevChatter)

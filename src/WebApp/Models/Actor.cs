@@ -24,7 +24,7 @@ public record Actor(
     string summary,
     string[] icon,
     PublicKey publicKey)
-        : BaseModel(context, type, id, name)
+        : BaseObject(context, type, id, name)
 {
 }
 

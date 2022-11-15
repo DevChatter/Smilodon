@@ -12,7 +12,7 @@ public abstract record BaseObject(
 public record Collection(
     [property: JsonPropertyName("@context")]
     List<string> context,
-    string type = "Collection",
+    string type,
     string id,
     string name,
     uint totalItems,
@@ -26,7 +26,7 @@ public record Collection(
 public record OrderedCollection(
     [property: JsonPropertyName("@context")]
     List<string> context,
-    string type = "OrderedCollection",
+    string type,
     string id,
     string name,
     uint totalItems,

@@ -6,9 +6,16 @@ public static class WebfingerEndpoints
 {
     public static RouteGroupBuilder MapWellKnownApi(this RouteGroupBuilder builder)
     {
+        builder.MapGet("/host-meta", HostMeta);
         builder.MapGet("/webfinger", GetAllAccount);
         //?resource=acct:gargron@mastodon.social
         return builder;
+    }
+
+    public static async Task<IResult> HostMeta()
+    {
+        await Task.Delay(1); // TODO: Replace with our metadata
+        return TypedResults.Ok();
     }
 
     public static async Task<IResult> GetAllAccount([FromQuery]string resource)

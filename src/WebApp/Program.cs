@@ -24,4 +24,8 @@ app.MapGroup("/api/v1/admin")
     .MapAdminApiV1()
     .WithTags("Admin Endpoints");
 
+app.MapGroup("/.well-known/")
+    .MapWellKnownApi()
+    .WithTags("Well Known Endpoints");
+
 app.Run();

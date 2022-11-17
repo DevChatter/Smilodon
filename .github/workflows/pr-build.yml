@@ -1,0 +1,56 @@
+name: PR - Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+defaults:
+  run:
+    working-directory: src
+
+jobs:
+  api-build:
+    name: WebApp Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Latest Code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore
+
+    - name: Build API
+      run: dotnet build --no-restore
+
+    - name: Save Built API to Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          .
+          !WebApp/ClientApp
+        key: api-${{ runner.os }}-${{github.run_id}}
+
+  api-test:
+    name: WebApp Testing
+    runs-on: ubuntu-latest
+    needs: api-build
+
+    steps:
+    - name: Pull Built API from Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          .
+          !WebApp/ClientApp
+        key: api-${{ runner.os }}-${{github.run_id}}
+
+    - name: Run Tests
+      run: dotnet test --no-build --verbosity normal

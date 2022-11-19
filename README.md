@@ -38,3 +38,5 @@ dotnet run watch
 [![Brendoneus Mastodon Follow](https://img.shields.io/mastodon/follow/109288133487144928?domain=https%3A%2F%2Four.devchatter.com&style=social)](https://our.devchatter.com/@brendoneus)
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCA8TsqMrOdFBv66iIuU6efA?style=social)](https://www.youtube.com/c/devchatter)
 [![DevChatter Twitch](https://img.shields.io/badge/Twitch-DevChatter-9146FF)](https://www.twitch.tv/DevChatter)
+
+**Note: we'll add people here once we have more contributors!**

@@ -1,16 +1,8 @@
-using System.Text.Json.Serialization;
-
 namespace Smilodon.WebApp.Models;
 
-public record PublicKey
-{
-    public string id { get; set; }
-    public string owner { get; set; }
-    public string publicKeyPem { get; set; }
-}
+public record PublicKey(string id, string owner, string publicKeyPem);
 
 public record Actor(
-    [property: JsonPropertyName("@context")]
     List<string> context,
     string type,
     string id,

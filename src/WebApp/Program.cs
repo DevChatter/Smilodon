@@ -1,4 +1,5 @@
 using Smilodon.WebApp.Api.Admin;
+using Smilodon.WebApp.Api.Webfinger;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Smilodon.WebApp.Api.Admin;
+namespace Smilodon.WebApp.Api.Webfinger;
 
 public static class WebfingerEndpoints
 {

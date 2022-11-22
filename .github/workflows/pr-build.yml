@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-defaults:
-  run:
-    working-directory: src
-
 jobs:
   api-build:
     name: WebApp Build

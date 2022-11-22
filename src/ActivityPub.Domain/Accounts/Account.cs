@@ -4,6 +4,40 @@ namespace ActivityPub.Domain.Accounts;
 
 public class Account
 {
+    public Account(string id, string username, string accountUri,
+        string url, string displayName, string note, string avatar,
+        string avatarStatic, string headerImage, string headerStatic,
+        bool isLocked, ProfileField[] fields, Emoji[] emojis, bool isBot,
+        bool isGroup, bool? isDiscoverable, Account hasMovedTo, bool? isSuspended,
+        bool isLimited, DateTime createdAt, DateTime? lastStatusAt,
+        int statusCount, int followerCount, int followingCount)
+    {
+        Id = id;
+        Username = username;
+        AccountUri = accountUri;
+        Url = url;
+        DisplayName = displayName;
+        Note = note;
+        Avatar = avatar;
+        AvatarStatic = avatarStatic;
+        HeaderImage = headerImage;
+        HeaderStatic = headerStatic;
+        IsLocked = isLocked;
+        Fields = fields;
+        Emojis = emojis;
+        IsBot = isBot;
+        IsGroup = isGroup;
+        IsDiscoverable = isDiscoverable;
+        HasMovedTo = hasMovedTo;
+        IsSuspended = isSuspended;
+        IsLimited = isLimited;
+        CreatedAt = createdAt;
+        LastStatusAt = lastStatusAt;
+        StatusCount = statusCount;
+        FollowerCount = followerCount;
+        FollowingCount = followingCount;
+    }
+
     /// <summary>
     /// The Account Id.
     /// </summary>

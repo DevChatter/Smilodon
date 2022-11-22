@@ -2,6 +2,13 @@
 {
     public class ProfileField
     {
+        public ProfileField(string name, string value, DateTime? verifiedAt)
+        {
+            Name = name;
+            Value = value;
+            VerifiedAt = verifiedAt;
+        }
+
         /// <summary>
         /// The key of a given field’s key-value pair.
         /// </summary>

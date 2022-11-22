@@ -2,6 +2,16 @@
 
 public class Emoji
 {
+    public Emoji(string shortCode, string url, string staticUrl,
+        bool isVisibleInPicker, string category)
+    {
+        ShortCode = shortCode;
+        Url = url;
+        StaticUrl = staticUrl;
+        IsVisibleInPicker = isVisibleInPicker;
+        Category = category;
+    }
+
     /// <summary>
     /// The name of the custom Emoji.
     /// </summary>

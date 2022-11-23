@@ -30,6 +30,10 @@ To run the WebApp, you can navigate to the `\WebApp` folder from your preferred 
 dotnet run watch
 ```
 
+## Project Documentation
+
+For information about the project, see the [Smilodon Documentation](https://devchatter.github.io/Smilodon)
+
 ## Primary Contributors
 
 ### Brendan Enrick (@Brendoneus)

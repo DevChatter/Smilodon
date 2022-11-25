@@ -30,6 +30,31 @@ To run the WebApp, you can navigate to the `\WebApp` folder from your preferred 
 dotnet run watch
 ```
 
+### Using Entity Framework Core
+
+#### 1. Install EF Core CLI tool
+```bash
+dotnet tool restore
+```
+
+#### 2. Create a local database user for smilodon
+```postgresql
+CREATE USER smilodon WITH PASSWORD 'smilodon' CREATEDB;
+CREATE DATABASE smilodon;
+```
+
+#### 3. Initialize your local database
+```bash
+cd ./src/Infrastructure/Persistence
+dotnet ef database update
+```
+
+#### Creating a migration
+```bash
+cd ./src/Infrastructure/Persistence
+dotnet ef migrations add <NAME>
+```
+
 ## Primary Contributors
 
 ### Brendan Enrick (@Brendoneus)

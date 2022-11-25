@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Smilodon.Infrastructure.Persistence;
 using Smilodon.WebApp.Api.Admin;
 using Smilodon.WebApp.Api.Webfinger;
 
@@ -15,6 +17,12 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+// Add the database context to the DI container
+builder.Services.AddDbContext<SmilodonDbContext>(options =>
+    options
+        .UseNpgsql("Host=localhost;Database=smilodon;User Id=smilodon;Password=smilodon;")
+        .UseSnakeCaseNamingConvention());
 
 app.UseHttpsRedirection();
 

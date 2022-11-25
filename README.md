@@ -55,6 +55,10 @@ cd ./src/Infrastructure/Persistence
 dotnet ef migrations add <NAME>
 ```
 
+## Project Documentation
+
+For information about the project, see the [Smilodon Documentation](https://devchatter.github.io/Smilodon)
+
 ## Primary Contributors
 
 ### Brendan Enrick (@Brendoneus)

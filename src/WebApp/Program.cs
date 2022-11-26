@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Smilodon.Infrastructure.Persistence;
 using Smilodon.WebApp.Api.Admin;
 using Smilodon.WebApp.Api.Webfinger;
 
@@ -6,6 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+// Add the database context to the DI container
+builder.Services.AddDbContext<SmilodonDbContext>(options =>
+    options
+        .UseNpgsql("Host=localhost; Database=smilodon; User Id=smilodon; Password=smilodon;")
+        .UseSnakeCaseNamingConvention());
+
 
 var app = builder.Build();
 

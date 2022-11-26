@@ -3,6 +3,11 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.0" />
+    <PackageVersion Include="EFCore.NamingConventions" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageVersion Include="AutoFixture" Version="4.17.0" />
     <PackageVersion Include="AutoFixture.Xunit2" Version="4.17.0" />
     <PackageVersion Include="FluentAssertions" Version="6.8.0" />

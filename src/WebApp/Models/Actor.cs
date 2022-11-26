@@ -15,8 +15,4 @@ public record Actor(
     string name,
     string summary,
     string[] icon,
-    PublicKey publicKey)
-        : BaseObject(context, type, id, name)
-{
-}
-
+    PublicKey publicKey) : BaseObject(context, type, id, name);

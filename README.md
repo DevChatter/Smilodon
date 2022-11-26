@@ -20,7 +20,15 @@ ActivityPub implementation in dotnet (.net).
 
 [![PR - Build and Test](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml/badge.svg)](https://github.com/DevChatter/Smilodon/actions/workflows/pr-build.yml)
 
+## Project Documentation
+
+Want to learn more about the project? Check the [Project Smilodon Documentation](https://devchatter.github.io/Smilodon/) to learn about working with this project.
+
 ## Running Development Build Locally
+
+### Setting Up the Local Environment
+
+Please see the documentation for instructions on [Setting Up Smilodon Development Locally](https://devchatter.github.io/Smilodon/development-setup)
 
 ### Running the WebApp (API) locally
 
@@ -29,35 +37,6 @@ To run the WebApp, you can navigate to the `\WebApp` folder from your preferred 
 ``` bat
 dotnet run watch
 ```
-
-### Using Entity Framework Core
-
-#### 1. Install EF Core CLI tool
-```bash
-dotnet tool restore
-```
-
-#### 2. Create a local database user for smilodon
-```postgresql
-CREATE USER smilodon WITH PASSWORD 'smilodon' CREATEDB;
-CREATE DATABASE smilodon;
-```
-
-#### 3. Initialize your local database
-```bash
-cd ./src/Infrastructure/Persistence
-dotnet ef database update
-```
-
-#### Creating a migration
-```bash
-cd ./src/Infrastructure/Persistence
-dotnet ef migrations add <NAME>
-```
-
-## Project Documentation
-
-For information about the project, see the [Smilodon Documentation](https://devchatter.github.io/Smilodon)
 
 ## Primary Contributors
 

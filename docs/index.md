@@ -1,7 +1,7 @@
 
-## Smilodon Docs
+## Setting Up the Project
 
-This project is just starting, so the docs are incomplete. 
+Check the [Development Setup Instructions](development-setup)
 
 ## Project Components
 

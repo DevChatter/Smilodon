@@ -1,9 +1,12 @@
 Contributing
 ============
 
+
 Thank you for investing your time in contributing to our project!
 
 In this guide you will get an overview of the contribution workflow from opening an issue, creating a PR, reviewing, and merging the PR.
+
+There are many ways you can help out, so everyone can find a way to help! Whether you're helping with the code, testing, or helping others understand the project by updating and writing documentation. ❤️ 
 
 There are many ways you can help out, so everyone can find a way to help! Whether you're helping with the code, testing, or helping others understand the project by updating and writing documentation. ❤️ 
 

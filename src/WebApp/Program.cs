@@ -30,7 +30,6 @@ builder.Services.AddOpenTelemetryTracing(tracerProviderBuilder =>
         .AddSqlClientInstrumentation();
 });
 
-
 builder.Services.AddControllersWithViews();
 
 // Add the database context to the DI container
@@ -38,7 +37,6 @@ builder.Services.AddDbContext<SmilodonDbContext>(options =>
     options
         .UseNpgsql("Host=localhost; Database=smilodon; User Id=smilodon; Password=smilodon;")
         .UseSnakeCaseNamingConvention());
-
 
 var app = builder.Build();
 

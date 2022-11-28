@@ -7,4 +7,8 @@
     <RootNamespace>Smilodon.Domain</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Ardalis.Specification" />
+  </ItemGroup>
+
 </Project>

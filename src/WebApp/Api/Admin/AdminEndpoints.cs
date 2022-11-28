@@ -1,3 +1,6 @@
+using Smilodon.Domain.Models;
+using Smilodon.Domain.Persistence;
+
 namespace Smilodon.WebApp.Api.Admin;
 
 public static class AdminEndpointsV1
@@ -11,17 +14,16 @@ public static class AdminEndpointsV1
         return builder;
     }
 
-    public static async Task<IResult> GetAllAccounts()
+    public static async Task<IResult> GetAllAccounts(IRepository<Account> repository, CancellationToken cancellationToken)
     {
-        List<string> accounts = new List<string> { "@Brendoneus", "@DevChatter" };
-        await Task.Delay(1); // TODO: Replace with DB Lookup
+        List<Account> accounts = await repository.ListAsync(cancellationToken);
         return TypedResults.Ok(accounts);
     }
 
-    public static async Task<IResult> GetAccount(int id)
+    public static async Task<IResult> GetAccount(long id, IRepository<Account> repository, CancellationToken cancellationToken)
     {
-        await Task.Delay(1); // TODO: Replace with DB Lookup
-        return TypedResults.Ok("@Brendoneus");
+        Account? account = await repository.GetByIdAsync(id, cancellationToken);
+        return account is null ? TypedResults.NotFound(new {}) : TypedResults.Ok(account);
     }
 
     public static async Task<IResult> ActOnAccount(int id)

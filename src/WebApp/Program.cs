@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Smilodon.Domain.Persistence;
 using Smilodon.Infrastructure.Persistence;
 using Smilodon.WebApp.Api.Admin;
 using Smilodon.WebApp.Api.Webfinger;
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<SmilodonDbContext>(options =>
         .UseNpgsql("Host=localhost; Database=smilodon; User Id=smilodon; Password=smilodon;")
         .UseSnakeCaseNamingConvention());
 
+builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+builder.Services.AddDbContext<SmilodonDbContext>();
 
 var app = builder.Build();
 
